@@ -43,6 +43,10 @@ will create the foo_2.11 dependency, but exclude the scala libs, and
 
 will create the foo_2.11 dependency, but exclude the scala libs as well as `bar` and `baz`.
 
+## Publishing to Maven Local
+
+`gradle publishToMavenLocal`
+
 ## Publishing to BinTray
 
 `gradle -PbintrayApiKey=bintrayApiKeyHere bintrayUpload`
