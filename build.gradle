@@ -22,7 +22,6 @@ dependencies {
 
 group = 'com.github.rocketraman'
 version = '0.1'
-ext.projectArtifactId = "gradle-dep-excludes-plugin"
 
 jar {
   manifest {
@@ -36,8 +35,6 @@ jar {
 }
 
 def pomConfig = {
-  name projectArtifactId
-  description 'Sometimes you just want a simple way to exclude dependencies without creating closures. This plugin creates a method on a Gradle project that provides a little syntax sugar for exclusions.'
   url 'https://github.com/rocketraman/gradle-dep-excludes-plugin'
   inceptionYear '2014'
 
@@ -88,7 +85,6 @@ publishing {
       artifact sourceJar
       artifact groovydocJar
 
-      setArtifactId(projectArtifactId)
       pom.withXml {
         asNode().children().last() + pomConfig
       }
