@@ -17,11 +17,20 @@ buildscript {
   }
   
   dependencies {
-    classpath 'com.github.rocketraman:dep-excludes:0.1'
+    classpath 'com.github.rocketraman:dep-excludes-plugin:0.1'
   }
 }
 ```
-The current version is known to work with Gradle versions up to 2.1.
+
+or more simply using the new incubating plugin mechanism in Gradle 2.1:
+
+```
+plugins {
+  id "com.github.rocketraman.dep-excludes" version "0.1"
+}
+```
+
+The current version is known to work in Gradle version 2.1.
 
 ### Simple Exclusions
 
@@ -43,10 +52,12 @@ will create the foo_2.11 dependency, but exclude the scala libs, and
 
 will create the foo_2.11 dependency, but exclude the scala libs as well as `bar` and `baz`.
 
-## Publishing to Maven Local
+## Publishing
+
+### Maven Local
 
 `gradle publishToMavenLocal`
 
-## Publishing to BinTray
+### BinTray and Gradle Plugin Registry
 
 `gradle -PbintrayApiKey=bintrayApiKeyHere bintrayUpload`
