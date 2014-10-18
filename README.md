@@ -42,3 +42,7 @@ will create the foo_2.11 dependency, but exclude the scala libs, and
 `scalaDepExcept("org.foo:foo_2.11:1.0", ["bar", "baz"])`
 
 will create the foo_2.11 dependency, but exclude the scala libs as well as `bar` and `baz`.
+
+## Publishing to BinTray
+
+`gradle -PbintrayApiKey=bintrayApiKeyHere bintrayUpload`
